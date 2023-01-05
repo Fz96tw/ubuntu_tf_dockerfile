@@ -3,7 +3,9 @@ FROM ubuntu
 RUN apt update
 
 RUN apt install -y wget
-
+RUN apt install -y gnupg
+RUN apt install -y sudo
+RUN apt install -y lsb-core
 RUN wget -O- https://apt.releases.hashicorp.com/gpg | \
     gpg --dearmor | \
     sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg
