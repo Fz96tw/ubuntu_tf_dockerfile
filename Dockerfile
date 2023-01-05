@@ -21,3 +21,5 @@ RUN echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] \
 RUN apt update
 
 RUN sudo apt install -y terraform
+RUN apt install -y python3-pip
+RUN python3 -m pip install ansible
